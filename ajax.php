@@ -20,8 +20,7 @@ $data = file_get_contents("php://input");
 $objData = json_decode($data);
 //print_r($objData); 
 $arAJXClass = array();
-$arAJXClass["LoginGUI"] = "login.cls.php"; 
-
+$arAJXClass["LoginGUI"] = "login.cls.php";
 if(isset($objData->__class)){
 	if( isset($arAJXClass[$objData->__class])){
 		require_once($arAJXClass[$objData->__class]);
