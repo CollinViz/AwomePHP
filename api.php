@@ -1019,8 +1019,8 @@ class DataService
     {
         $keyset = array_keys((array) $record);
         foreach ($keyset as $key) {
-            if (!$this->tables->get($tableName)->exists($key)) {
-                unset($record[$key]);
+
+            if (!$this->tables->get($tableName)->exists($key)) {   
             }
         }
         if ($id != '') {
@@ -3773,8 +3773,10 @@ class Api
                 }
             }
             $response = $this->responder->error(ErrorCode::ERROR_NOT_FOUND, $e->getMessage());
-            if ($this->debug) {
-                $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine());
+
+            if ($this->debug) { 
+                $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine() + ' Message:' + $e->getMessage());
+
             }
         }
         return $response;
@@ -3914,13 +3916,17 @@ class Request
     private $body;
     private $headers;
 
-    public function __construct(String $method = null, String $path = null, String $query = null, String $body = null)
+
+    public function __construct(String $method = null, String $path = null, String $query = null, array $headers = null, String $body = null)
+
     {
         $this->parseMethod($method);
         $this->parsePath($path);
         $this->parseParams($query);
+
+        $this->parseHeaders($headers);
         $this->parseBody($body);
-        $this->headers = array();
+
     }
 
     private function parseMethod(String $method = null)
@@ -3960,6 +3966,22 @@ class Request
         $query = str_replace('[][]=', '[]=', str_replace('=', '[]=', $query));
         parse_str($query, $this->params);
     }
+
+
+    private function parseHeaders(array $headers = null)
+    {
+        if (!$headers) {
+            $headers = array();
+            foreach ($_SERVER as $name => $value) {
+                if (substr($name, 0, 5) == 'HTTP_') {
+                    $key = str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))));
+                    $headers[$key] = $value;
+                }
+            }
+        }
+        $this->headers = $headers;
+    }
+
 
     private function parseBody(String $body = null)
     {
@@ -4015,17 +4037,10 @@ class Request
         return $body;
     }
 
-    public function addHeader(String $key, String $value = null)
+
+    public function addHeader(String $key, String $value)
     {
-        if ($value === null) {
-            $header = 'HTTP_' . strtoupper(str_replace('-', '_', $key));
-            if (isset($_SERVER[$header])) {
-                $value = $_SERVER[$header];
-            }
-        }
-        if ($value !== null) {
-            $this->headers[$key] = $value;
-        }
+        $this->headers[$key] = $value;
     }
 
     public function getHeader(String $key): String
@@ -4050,15 +4065,16 @@ class Request
         $line = explode(' ', trim(array_shift($lines)), 2);
         $method = $line[0];
         $url = isset($line[1]) ? $line[1] : '';
-        $headers = array();
+
         $path = parse_url($url, PHP_URL_PATH);
         $query = parse_url($url, PHP_URL_QUERY);
-        $request = new Request($method, $path, $query, $body);
+        $headers = array();
         foreach ($lines as $line) {
             list($key, $value) = explode(':', $line, 2);
-            $request->addHeader($key, trim($value));
+            $headers[$key] = trim($value);
         }
-        return $request;
+        return new Request($method, $path, $query, $headers, $body);
+
     }
 }
 
@@ -4126,7 +4142,9 @@ class Response
     public function output()
     {
         http_response_code($this->getStatus());
-        foreach ($this->getHeaders() as $key => $value) {
+
+        foreach ($this->headers as $key => $value) {
+
             header("$key: $value");
         }
         echo $this->getBody();
@@ -4167,10 +4185,14 @@ class CustomController {
 $config = new Config([
     'username' => 'root',
     'password' => 'admin',
-    'database' => 'hand' 
+
+    'database' => 'hand',
+        'debug' => true,
+    'cacheTime'=>0
 ]);
 
 $request = new Request();
-$api = new Api($config);
+$api = new Api($config); 
+
 $response = $api->handle($request);
 $response->output();
