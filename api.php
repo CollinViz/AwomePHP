@@ -1019,7 +1019,6 @@ class DataService
     {
         $keyset = array_keys((array) $record);
         foreach ($keyset as $key) {
-            if (!$this->tables->get($tableName)->exists($key)) {                
 
             if (!$this->tables->get($tableName)->exists($key)) {   
             }
@@ -3774,8 +3773,10 @@ class Api
                 }
             }
             $response = $this->responder->error(ErrorCode::ERROR_NOT_FOUND, $e->getMessage());
+
             if ($this->debug) { 
                 $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine() + ' Message:' + $e->getMessage());
+
             }
         }
         return $response;
@@ -3915,13 +3916,17 @@ class Request
     private $body;
     private $headers;
 
+
     public function __construct(String $method = null, String $path = null, String $query = null, array $headers = null, String $body = null)
+
     {
         $this->parseMethod($method);
         $this->parsePath($path);
         $this->parseParams($query);
+
         $this->parseHeaders($headers);
         $this->parseBody($body);
+
     }
 
     private function parseMethod(String $method = null)
@@ -3962,6 +3967,7 @@ class Request
         parse_str($query, $this->params);
     }
 
+
     private function parseHeaders(array $headers = null)
     {
         if (!$headers) {
@@ -3975,6 +3981,7 @@ class Request
         }
         $this->headers = $headers;
     }
+
 
     private function parseBody(String $body = null)
     {
@@ -4030,6 +4037,7 @@ class Request
         return $body;
     }
 
+
     public function addHeader(String $key, String $value)
     {
         $this->headers[$key] = $value;
@@ -4057,6 +4065,7 @@ class Request
         $line = explode(' ', trim(array_shift($lines)), 2);
         $method = $line[0];
         $url = isset($line[1]) ? $line[1] : '';
+
         $path = parse_url($url, PHP_URL_PATH);
         $query = parse_url($url, PHP_URL_QUERY);
         $headers = array();
@@ -4133,7 +4142,9 @@ class Response
     public function output()
     {
         http_response_code($this->getStatus());
+
         foreach ($this->headers as $key => $value) {
+
             header("$key: $value");
         }
         echo $this->getBody();
@@ -4174,6 +4185,7 @@ class CustomController {
 $config = new Config([
     'username' => 'root',
     'password' => 'admin',
+<<<<<<< HEAD
     'database' => 'awome',
 =======
 
@@ -4185,5 +4197,6 @@ $config = new Config([
 
 $request = new Request();
 $api = new Api($config); 
+
 $response = $api->handle($request);
 $response->output();
