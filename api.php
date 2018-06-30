@@ -4183,8 +4183,8 @@ class CustomController {
 // file: src/index.php
 
 $config = new Config([
-    'username' => 'root',
-    'password' => 'admin',
+    'username' => 'awome',
+    'password' => 'awome',
     'database' => 'awome',
     'debug' => true,
     'cacheTime'=>0
