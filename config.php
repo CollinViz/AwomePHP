@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 $PAGE_NAME=""; 
  
 $hostname_conEber = "127.0.0.1";
-$database_conEber = "hand";
+$database_conEber = "awome";
 $username_conEber = "root";
 $password_conEber = "admin";
  
