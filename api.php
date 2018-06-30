@@ -1020,6 +1020,8 @@ class DataService
         $keyset = array_keys((array) $record);
         foreach ($keyset as $key) {
             if (!$this->tables->get($tableName)->exists($key)) {                
+
+            if (!$this->tables->get($tableName)->exists($key)) {   
             }
         }
         if ($id != '') {
@@ -4063,6 +4065,7 @@ class Request
             $headers[$key] = trim($value);
         }
         return new Request($method, $path, $query, $headers, $body);
+
     }
 }
 
@@ -4172,6 +4175,10 @@ $config = new Config([
     'username' => 'root',
     'password' => 'admin',
     'database' => 'awome',
+=======
+
+    'database' => 'hand',
+>>>>>>> 8ed40348f3e0229d6f89a18607be30132e26054e
         'debug' => true,
     'cacheTime'=>0
 ]);
