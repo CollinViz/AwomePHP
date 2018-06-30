@@ -4185,13 +4185,8 @@ class CustomController {
 $config = new Config([
     'username' => 'root',
     'password' => 'admin',
-<<<<<<< HEAD
     'database' => 'awome',
-=======
-
-    'database' => 'hand',
->>>>>>> 8ed40348f3e0229d6f89a18607be30132e26054e
-        'debug' => true,
+    'debug' => true,
     'cacheTime'=>0
 ]);
 
