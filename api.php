@@ -2338,7 +2338,10 @@ class GenericDB
         $parameters = array_values($columnValues);
         $whereClause = $this->conditions->getWhereClause($condition, $parameters);
         $sql = 'UPDATE "' . $tableName . '" SET ' . $updateColumns . $whereClause;
+        //echo "\n".$sql."\n";
+
         $stmt = $this->query($sql, $parameters);
+        //$stmt->debugDumpParams();
         return $stmt->rowCount();
     }
 
@@ -2357,6 +2360,7 @@ class GenericDB
     {
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($parameters);
+         
         return $stmt;
     }
 }
@@ -3775,7 +3779,7 @@ class Api
             $response = $this->responder->error(ErrorCode::ERROR_NOT_FOUND, $e->getMessage());
 
             if ($this->debug) { 
-                $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine() + ' Message:' + $e->getMessage());
+                $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine() . ' Message:' . $e->getMessage());
 
             }
         }
@@ -3989,6 +3993,7 @@ class Request
             $body = file_get_contents('php://input');
         }
         $this->body = $body;
+        
     }
 
     public function getMethod(): String
