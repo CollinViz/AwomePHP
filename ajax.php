@@ -12,6 +12,7 @@ ini_set("include_path", ini_get("include_path")."".$PATH_DM."".$DEPENDS_PATH);
 
 require_once 'config.php';
 require_once 'login.cls.php';
+require_once 'Finance.cls.php';
 
 
 
@@ -21,6 +22,7 @@ $objData = json_decode($data);
 //print_r($objData); 
 $arAJXClass = array();
 $arAJXClass["LoginGUI"] = "login.cls.php"; 
+$arAJXClass["FinanceGUI"] = "Finance.cls.php"; 
 
 if(isset($objData->__class)){
 	if( isset($arAJXClass[$objData->__class])){
