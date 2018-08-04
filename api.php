@@ -529,7 +529,14 @@ class Responder
         $errorCode = new ErrorCode($error);
         $status = $errorCode->getStatus();
         $document = new ErrorDocument($errorCode, $argument);
-        return new Response($status, $document);
+        $response = new Response($status, $document);
+        if (isset($_SERVER['HTTP_ORIGIN'])) {
+            $response->addHeader("Access-Control-Allow-Origin", $_SERVER['HTTP_ORIGIN']);
+            $response->addHeader('Access-Control-Allow-Credentials', "true");
+            $response->addHeader('Access-Control-Max-Age:', '86400');
+            // cache for 1 day
+        }
+        return $response;
     }
     public function success($result)
     {
@@ -882,10 +889,6 @@ class DataService
     private function sanitizeRecord($tableName, $record, $id)
     {
         $keyset = array_keys((array) $record);
-        foreach ($keyset as $key) {
-            if (!$this->tables->get($tableName)->exists($key)) {
-            }
-        }
         if ($id != '') {
             $pk = $this->tables->get($tableName)->getPk();
             foreach ($this->tables->get($tableName)->columnNames() as $key) {
@@ -1913,7 +1916,7 @@ class GenericDB
         $options = array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION, \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC);
         switch ($this->driver) {
             case 'mysql':
-                return $options + [\PDO::ATTR_EMULATE_PREPARES => true, \PDO::MYSQL_ATTR_FOUND_ROWS => true];
+                return $options + [\PDO::ATTR_EMULATE_PREPARES => false, \PDO::MYSQL_ATTR_FOUND_ROWS => true];
             case 'pgsql':
                 return $options + [\PDO::ATTR_EMULATE_PREPARES => false];
             case 'sqlsrv':
@@ -2067,7 +2070,12 @@ class GenericDB
     private function query($sql, array $parameters)
     {
         $stmt = $this->pdo->prepare($sql);
+        //$stmt->debugDumpParams();
+
+        //echo "- $sql -- " . json_encode($parameters, JSON_UNESCAPED_UNICODE) . "\n";
+        //die("");
         $stmt->execute($parameters);
+        
         return $stmt;
     }
 }
@@ -3168,23 +3176,40 @@ class Api
         try {
             $response = $this->router->route($request);
         } catch (\Throwable $e) {
+             
             if ($e instanceof \PDOException) {
                 if (strpos(strtolower($e->getMessage()), 'duplicate') !== false) {
-                    return $this->responder->error(ErrorCode::DUPLICATE_KEY_EXCEPTION, '');
+                    $response = $this->responder->error(ErrorCode::DUPLICATE_KEY_EXCEPTION, $this->debug ? $e->getMessage() : '');
+                    if ($this->debug) {
+                        $response->addHeader('X-Debug-Info', $response->getBody());
+                    }
+                    return $response;
                 }
                 if (strpos(strtolower($e->getMessage()), 'default value') !== false) {
-                    return $this->responder->error(ErrorCode::DATA_INTEGRITY_VIOLATION, '');
+                    $response = $this->responder->error(ErrorCode::DATA_INTEGRITY_VIOLATION, $this->debug ? $e->getMessage() : '');
+                    if ($this->debug) {
+                        $response->addHeader('X-Debug-Info', $response->getBody());
+                    }
+                    return $response;
                 }
                 if (strpos(strtolower($e->getMessage()), 'allow nulls') !== false) {
-                    return $this->responder->error(ErrorCode::DATA_INTEGRITY_VIOLATION, '');
+                    $response = $this->responder->error(ErrorCode::DATA_INTEGRITY_VIOLATION, $this->debug ? $e->getMessage() : '');
+                    if ($this->debug) {
+                        $response->addHeader('X-Debug-Info', $response->getBody());
+                    }
+                    return $response;
                 }
                 if (strpos(strtolower($e->getMessage()), 'constraint') !== false) {
-                    return $this->responder->error(ErrorCode::DATA_INTEGRITY_VIOLATION, '');
+                    $response = $this->responder->error(ErrorCode::DATA_INTEGRITY_VIOLATION, $this->debug ? $e->getMessage() : '');
+                    if ($this->debug) {
+                        $response->addHeader('X-Debug-Info', $response->getBody());
+                    }
+                    return $response;
                 }
             }
             $response = $this->responder->error(ErrorCode::ERROR_NOT_FOUND, $e->getMessage());
             if ($this->debug) {
-                $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine() + ' Message:' + $e->getMessage());
+                $response->addHeader('X-Debug-Info', 'Exception in ' . $e->getFile() . ' on line ' . $e->getLine() . ' Message:' . $e->getMessage());
             }
         }
         return $response;
@@ -3503,21 +3528,8 @@ class Response
         return $str;
     }
 }
-// file: src/CustomController.php
-class CustomController
-{
-    public function _listAll(Request $request)
-    {
-        $table = $request->getPathSegment(2);
-        $params = $request->getParams();
-        if (!$this->service->exists($table)) {
-            return $this->responder->error(ErrorCode::TABLE_NOT_FOUND, $table);
-        }
-        return $this->responder->success($this->service->_list($table, $params));
-    }
-}
 // file: src/index.php
-$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' => 999]);
+$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' => 0]);
 $request = new Request();
 $api = new Api($config);
 $response = $api->handle($request);
