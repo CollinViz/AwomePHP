@@ -1854,6 +1854,8 @@ class DataConverter
         switch ($conversion) {
             case 'base64url_to_base64':
                 return str_pad(strtr($value, '-_', '+/'), ceil(strlen($value) / 4) * 4, '=', STR_PAD_RIGHT);
+            case 'checkNumeric':
+                return is_numeric($value) ? $value : 0;
         }
         return $value;
     }
@@ -1861,6 +1863,12 @@ class DataConverter
     {
         if ($column->isBinary()) {
             return 'base64url_to_base64';
+        }
+        if ($column->getType() == "decimal" || $column->getType() == "integer") {
+            return 'checkNumeric';
+        }
+        if ($column->getType() == "varchar") {
+            return 'checkLength';
         }
         return 'none';
     }
@@ -1873,7 +1881,11 @@ class DataConverter
             if ($conversion != 'none') {
                 $value = $columnValues[$columnName];
                 if ($value !== null) {
-                    $columnValues[$columnName] = $this->convertInputValue($conversion, $value);
+                    if ($conversion == "checkLength") {
+                        $columnValues[$columnName] = strlen($value) > $column->getLength() ? substr($value, 0, $column->getLength()) : $value;
+                    } else {
+                        $columnValues[$columnName] = $this->convertInputValue($conversion, $value);
+                    }
                 }
             }
         }
@@ -2070,12 +2082,7 @@ class GenericDB
     private function query($sql, array $parameters)
     {
         $stmt = $this->pdo->prepare($sql);
-        //$stmt->debugDumpParams();
-
-        //echo "- $sql -- " . json_encode($parameters, JSON_UNESCAPED_UNICODE) . "\n";
-        //die("");
         $stmt->execute($parameters);
-        
         return $stmt;
     }
 }
@@ -3176,7 +3183,6 @@ class Api
         try {
             $response = $this->router->route($request);
         } catch (\Throwable $e) {
-             
             if ($e instanceof \PDOException) {
                 if (strpos(strtolower($e->getMessage()), 'duplicate') !== false) {
                     $response = $this->responder->error(ErrorCode::DUPLICATE_KEY_EXCEPTION, $this->debug ? $e->getMessage() : '');
@@ -3529,7 +3535,7 @@ class Response
     }
 }
 // file: src/index.php
-$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' => 0]);
+$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' =>9999]);
 $request = new Request();
 $api = new Api($config);
 $response = $api->handle($request);
