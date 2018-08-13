@@ -184,6 +184,9 @@ class TempFileCache implements Cache
     {
         $filename = $this->getFileName($key);
         $dirname = dirname($filename);
+        //echo $filename . " " . $dirname;
+        //die();
+
         if (!file_exists($dirname)) {
             if (!mkdir($dirname, 0755, true)) {
                 return false;
