@@ -908,6 +908,7 @@ class DataService
     }
     public function create($tableName, $record, array $params)
     {
+         
         $this->sanitizeRecord($tableName, $record, '');
         $table = $this->tables->get($tableName);
         $columnValues = $this->columns->getValues($table, true, $record, $params);
@@ -1969,12 +1970,15 @@ class GenericDB
     }
     public function createSingle(ReflectedTable $table, array $columnValues)
     {
+         
         $this->converter->convertColumnValues($table, $columnValues);
         $insertColumns = $this->columns->getInsert($table, $columnValues);
         $tableName = $table->getName();
+         
         $pkName = $table->getPk()->getName();
         $parameters = array_values($columnValues);
         $sql = 'INSERT INTO "' . $tableName . '" ' . $insertColumns;
+         
         $stmt = $this->query($sql, $parameters);
         if (isset($columnValues[$pkName])) {
             return $columnValues[$pkName];
@@ -2085,6 +2089,7 @@ class GenericDB
     private function query($sql, array $parameters)
     {
         $stmt = $this->pdo->prepare($sql);
+         
         $stmt->execute($parameters);
         return $stmt;
     }

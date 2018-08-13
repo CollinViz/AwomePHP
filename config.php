@@ -27,6 +27,11 @@ $hostname_conEber = "127.0.0.1";
 $database_conEber = "awome";
 $username_conEber = "awome";
 $password_conEber = "awome";
+
+//$hostname_conEber = "127.0.0.1";
+//$database_conEber = "ewepmcqo_awome";
+//$username_conEber = "ewepmcqo_awomis";
+//$password_conEber = "Aw0m3user";
  
 $concustomercontrol = new mysqli($hostname_conEber, $username_conEber, $password_conEber, $database_conEber);
 error_reporting(E_ALL);
