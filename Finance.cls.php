@@ -23,6 +23,15 @@ class FinanceGUI extends html {
         } 
         echo mysql2javaS::Array2JavaSArray($o);
           
+	}
+	public function deleteFinanceCooperative(){
+        $o = array("OK"=>"OK","message"=>"OK ");
+        if($this->Cooperative_ID !=""){
+            $ofin = new finance();
+            $ofin->deleteCooperative($this->Cooperative_ID,$this->Cooperative_Visit_ID);
+        } 
+        echo mysql2javaS::Array2JavaSArray($o);
+          
     }
 
     public function __construct() {
