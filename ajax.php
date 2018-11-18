@@ -1,8 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
 #TYPE_OS = WIN LINUX
-$TYPE_OS='WIN';
-$PATH_DM =";";$PATH_FD="\\\\";if($TYPE_OS=='WIN'){	$PATH_DM =";";	$PATH_FD="\\\\";}else{	$PATH_DM =":";	$PATH_FD="//";}
+$TYPE_OS=(PATH_SEPARATOR==':'?'LINUX':'WIN');
+$PATH_DM =PATH_SEPARATOR;$PATH_FD="\\\\";if($TYPE_OS=='WIN'){	$PATH_DM =PATH_SEPARATOR;	$PATH_FD="\\\\";}else{	$PATH_DM =PATH_SEPARATOR;	$PATH_FD="//";}
 
 $BASE_PATH = dirname(__FILE__);
 $DEPENDS_PATH  = ".".$PATH_DM."".$BASE_PATH;
@@ -13,6 +13,7 @@ ini_set("include_path", ini_get("include_path")."".$PATH_DM."".$DEPENDS_PATH);
 require_once 'config.php';
 require_once 'login.cls.php';
 require_once 'Finance.cls.php';
+require_once 'reports.php';
 
 
 
@@ -23,6 +24,7 @@ $objData = json_decode($data);
 $arAJXClass = array();
 $arAJXClass["LoginGUI"] = "login.cls.php"; 
 $arAJXClass["FinanceGUI"] = "Finance.cls.php"; 
+$arAJXClass["ReportsGUI"] = "reports.php"; 
 
 if(isset($objData->__class)){
 	if( isset($arAJXClass[$objData->__class])){

@@ -1,0 +1,476 @@
+[21-Jul-2018 20:03:43 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'awome'@'localhost' (using password: YES) in /home/ewepmcqo/public_html/awome/config.php on line 31
+[21-Jul-2018 20:07:19 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[21-Jul-2018 20:07:19 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[21-Jul-2018 20:10:49 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[21-Jul-2018 20:10:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[21-Jul-2018 20:11:54 UTC] PHP Fatal error:  Default value for parameters with a class type hint can only be NULL in /home/ewepmcqo/public_html/awome/api.php on line 14
+[21-Jul-2018 20:12:04 UTC] PHP Fatal error:  Default value for parameters with a class type hint can only be NULL in /home/ewepmcqo/public_html/awome/api.php on line 14
+[22-Jul-2018 10:03:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('entrepreneur_vi...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:03:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('enterprise_base...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:04:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('entrepreneur_vi...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:06:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('enterprise_base...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:06:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('enterprise_base...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:08:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('enterprise_base...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:08:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2037): Tqdev\PhpCrudApi\GenericDB->query('SELECT "Enterpr...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1463): Tqdev\PhpCrudApi\GenericDB->selectAll(Object(Tqdev\PhpCrudApi\ReflectedTable), Array, Object(Tqdev\PhpCrudApi\NoCondition), Array, 0, -1)
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('enterprise_base...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:15:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:15:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:16:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2010): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1461): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:16:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2037): Tqdev\PhpCrudApi\GenericDB->query('SELECT "Coopera...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1463): Tqdev\PhpCrudApi\GenericDB->selectAll(Object(Tqdev\PhpCrudApi\ReflectedTable), Array, Object(Tqdev\PhpCrudApi\NoCondition), Array, 0, -1)
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:22:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2037): Tqdev\PhpCrudApi\GenericDB->query('SELECT "Coopera...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1463): Tqdev\PhpCrudApi\GenericDB->selectAll(Object(Tqdev\PhpCrudApi\ReflectedTable), Array, Object(Tqdev\PhpCrudApi\NoCondition), Array, 0, -1)
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 10:28:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2037): Tqdev\PhpCrudApi\GenericDB->query('SELECT "Coopera...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1463): Tqdev\PhpCrudApi\GenericDB->selectAll(Object(Tqdev\PhpCrudApi\ReflectedTable), Array, Object(Tqdev\PhpCrudApi\NoCondition), Array, 0, -1)
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[22-Jul-2018 16:18:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2070
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2070): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2037): Tqdev\PhpCrudApi\GenericDB->query('SELECT "Enterpr...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1463): Tqdev\PhpCrudApi\GenericDB->selectAll(Object(Tqdev\PhpCrudApi\ReflectedTable), Array, Object(Tqdev\PhpCrudApi\NoCondition), Array, 0, -1)
+#3 /home/ewepmcqo/public_html/awome/api.php(558): Tqdev\PhpCrudApi\ViewService->_list('enterprise_base...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3107): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3046): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home in /home/ewepmcqo/public_html/awome/api.php on line 2070
+[07-Aug-2018 06:14:34 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/ewepmcqo/public_html/awome/config.php on line 31
+[07-Aug-2018 06:14:42 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/ewepmcqo/public_html/awome/config.php on line 31
+[07-Aug-2018 06:15:27 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/ewepmcqo/public_html/awome/config.php on line 31
+[07-Aug-2018 07:43:32 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:43:32 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:43:34 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:43:34 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:43:39 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:43:39 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:45:32 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:45:32 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:46:06 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:46:06 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/usr/lib/php:/usr/local/lib/php:.:/home/ewepmcqo/public_html/awome:/home/ewepmcqo/public_html/awome/include;.;/home/ewepmcqo/public_html/awome;/home/ewepmcqo/public_html/awome/Include') in /home/ewepmcqo/public_html/awome/login.cls.php on line 7
+[07-Aug-2018 07:47:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2090
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2090): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2029): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1465): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(565): Tqdev\PhpCrudApi\ViewService->_list('entrepreneur_vi...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3127): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3066): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2090
+[07-Aug-2018 07:48:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2090
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2090): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2029): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1465): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(565): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3127): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3066): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2090
+[07-Aug-2018 07:49:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared' in /home/ewepmcqo/public_html/awome/api.php:2090
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2090): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(2029): Tqdev\PhpCrudApi\GenericDB->query('SELECT COUNT(*)...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(1465): Tqdev\PhpCrudApi\GenericDB->selectCount(Object(Tqdev\PhpCrudApi\ReflectedTable), Object(Tqdev\PhpCrudApi\NoCondition))
+#3 /home/ewepmcqo/public_html/awome/api.php(565): Tqdev\PhpCrudApi\ViewService->_list('cooperative_bas...', Array)
+#4 [internal function]: Tqdev\PhpCrudApi\ViewController->_list(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3127): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3066): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_ht in /home/ewepmcqo/public_html/awome/api.php on line 2090
+[07-Aug-2018 09:17:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'Enterprise_Visit_ID' doesn't have a default value' in /home/ewepmcqo/public_html/awome/api.php:2090
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2090): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(1979): Tqdev\PhpCrudApi\GenericDB->query('INSERT INTO "en...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(912): Tqdev\PhpCrudApi\GenericDB->createSingle(Object(Tqdev\PhpCrudApi\ReflectedTable), Array)
+#3 /home/ewepmcqo/public_html/awome/api.php(337): Tqdev\PhpCrudApi\DataService->create('enterprise_visi...', Object(stdClass), Array)
+#4 [internal function]: Tqdev\PhpCrudApi\DataController->create(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3127): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3066): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public in /home/ewepmcqo/public_html/awome/api.php on line 2090
+[07-Aug-2018 09:18:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'Enterprise_Visit_ID' doesn't have a default value' in /home/ewepmcqo/public_html/awome/api.php:2090
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2090): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(1979): Tqdev\PhpCrudApi\GenericDB->query('INSERT INTO "en...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(912): Tqdev\PhpCrudApi\GenericDB->createSingle(Object(Tqdev\PhpCrudApi\ReflectedTable), Array)
+#3 /home/ewepmcqo/public_html/awome/api.php(337): Tqdev\PhpCrudApi\DataService->create('enterprise_visi...', Object(stdClass), Array)
+#4 [internal function]: Tqdev\PhpCrudApi\DataController->create(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3127): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3066): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public in /home/ewepmcqo/public_html/awome/api.php on line 2090
+[08-Aug-2018 15:41:14 UTC] PHP Notice:  Trying to get property of non-object in /home/ewepmcqo/public_html/awome/ajax.php on line 38
+[11-Aug-2018 11:56:03 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[13-Aug-2018 18:03:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:03:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:03:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:03:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:03:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:03:22 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES) in /home/ewepmcqo/public_html/awome/config.php on line 36
+[13-Aug-2018 18:03:37 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES) in /home/ewepmcqo/public_html/awome/config.php on line 36
+[13-Aug-2018 18:03:54 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES) in /home/ewepmcqo/public_html/awome/config.php on line 36
+[13-Aug-2018 18:05:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:40 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES) in /home/ewepmcqo/public_html/awome/config.php on line 36
+[13-Aug-2018 18:05:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:05:47 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES) in /home/ewepmcqo/public_html/awome/config.php on line 36
+[13-Aug-2018 18:08:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:08:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[13-Aug-2018 18:08:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'ewepmcqo_awomis'@'localhost' (using password: YES)' in /home/ewepmcqo/public_html/awome/api.php:1945
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(1945): PDO->__construct('mysql:host=loca...', 'ewepmcqo_awomis', 'Aw0m3user', Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'ewepmcqo_awome', 'ewepmcqo_awomis', 'Aw0m3user')
+#2 /home/ewepmcqo/public_html/awome/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/ewepmcqo/public_html/awome/api.php on line 1945
+[19-Sep-2018 13:38:33 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[01-Oct-2018 04:18:13 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[01-Oct-2018 10:37:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'Status' doesn't have a default value' in /home/ewepmcqo/public_html/awome/api.php:2090
+Stack trace:
+#0 /home/ewepmcqo/public_html/awome/api.php(2090): PDOStatement->execute(Array)
+#1 /home/ewepmcqo/public_html/awome/api.php(1979): Tqdev\PhpCrudApi\GenericDB->query('INSERT INTO "ac...', Array)
+#2 /home/ewepmcqo/public_html/awome/api.php(912): Tqdev\PhpCrudApi\GenericDB->createSingle(Object(Tqdev\PhpCrudApi\ReflectedTable), Array)
+#3 /home/ewepmcqo/public_html/awome/api.php(337): Tqdev\PhpCrudApi\DataService->create('actionplans', Object(stdClass), Array)
+#4 [internal function]: Tqdev\PhpCrudApi\DataController->create(Object(Tqdev\PhpCrudApi\Request))
+#5 /home/ewepmcqo/public_html/awome/api.php(3127): call_user_func(Array, Object(Tqdev\PhpCrudApi\Request))
+#6 /home/ewepmcqo/public_html/awome/api.php(3066): Tqdev\PhpCrudApi\SimpleRouter->handle(Object(Tqdev\PhpCrudApi\Request))
+#7 /home/ewepmcqo/public_html/awome/api.php( in /home/ewepmcqo/public_html/awome/api.php on line 2090
+[10-Oct-2018 19:09:02 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[10-Oct-2018 19:09:02 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[10-Oct-2018 19:09:02 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[15-Oct-2018 14:01:55 UTC] PHP Notice:  Trying to get property of non-object in /home/ewepmcqo/public_html/awome/ajax.php on line 38
+[17-Oct-2018 13:06:35 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-6320a781-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/ewepmcqo/public_html/awome/api.php on line 233
+[06-Nov-2018 18:52:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'awomefqx_awome'@'localhost' (using password: YES)' in /home/awomefqx/public_html/api.php:1945
+Stack trace:
+#0 /home/awomefqx/public_html/api.php(1945): PDO->__construct('mysql:host=loca...', 'awomefqx_awome', '][ks,2I\\$GYIZ', Array)
+#1 /home/awomefqx/public_html/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'awomefqx_awome', 'awomefqx_awome', '][ks,2I\\$GYIZ')
+#2 /home/awomefqx/public_html/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/awomefqx/public_html/api.php on line 1945
+[06-Nov-2018 19:02:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'awomefqx_awome'@'localhost' (using password: YES)' in /home/awomefqx/public_html/api.php:1945
+Stack trace:
+#0 /home/awomefqx/public_html/api.php(1945): PDO->__construct('mysql:host=loca...', 'awomefqx_awome', '][ks,2I\\$GYIZ', Array)
+#1 /home/awomefqx/public_html/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'awomefqx_awome', 'awomefqx_awome', '][ks,2I\\$GYIZ')
+#2 /home/awomefqx/public_html/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/awomefqx/public_html/api.php on line 1945
+[06-Nov-2018 19:03:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'awomefqx_awome'@'localhost' (using password: YES)' in /home/awomefqx/public_html/api.php:1945
+Stack trace:
+#0 /home/awomefqx/public_html/api.php(1945): PDO->__construct('mysql:host=loca...', 'awomefqx_awome', '][ks,2I\\$GYIZ', Array)
+#1 /home/awomefqx/public_html/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'awomefqx_awome', 'awomefqx_awome', '][ks,2I\\$GYIZ')
+#2 /home/awomefqx/public_html/api.php(3545): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/awomefqx/public_html/api.php on line 1945
+[06-Nov-2018 19:04:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'awomefqx_awome'@'localhost' (using password: YES)' in /home/awomefqx/public_html/api.php:1945
+Stack trace:
+#0 /home/awomefqx/public_html/api.php(1945): PDO->__construct('mysql:host=loca...', 'awomefqx_awome', '][ks,2I\\$GYIZ', Array)
+#1 /home/awomefqx/public_html/api.php(3159): Tqdev\PhpCrudApi\GenericDB->__construct('mysql', 'localhost', 3306, 'awomefqx_awome', 'awomefqx_awome', '][ks,2I\\$GYIZ')
+#2 /home/awomefqx/public_html/api.php(3547): Tqdev\PhpCrudApi\Api->__construct(Object(Tqdev\PhpCrudApi\Config))
+#3 {main}
+  thrown in /home/awomefqx/public_html/api.php on line 1945
+[09-Nov-2018 12:58:21 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[09-Nov-2018 12:58:21 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[09-Nov-2018 12:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 02:04:55 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/50a303e7ea15f7e3437124f202e87955): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[11-Nov-2018 02:04:55 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[11-Nov-2018 02:04:55 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[11-Nov-2018 02:04:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 02:04:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 02:04:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 02:04:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 02:04:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 02:04:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 23:28:49 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/50a303e7ea15f7e3437124f202e87955): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[11-Nov-2018 23:28:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[11-Nov-2018 23:28:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 06:47:06 UTC] PHP Notice:  Trying to get property of non-object in /home/awomefqx/public_html/ajax.php on line 38
+[12-Nov-2018 12:35:38 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/50a303e7ea15f7e3437124f202e87955): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[12-Nov-2018 12:35:38 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[12-Nov-2018 12:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[13-Nov-2018 07:28:20 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/50a303e7ea15f7e3437124f202e87955): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[13-Nov-2018 07:28:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/50a303e7ea15f7e3437124f202e87955): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3069
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3070
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3071
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 06:37:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 15:25:34 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[14-Nov-2018 15:25:34 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/50a303e7ea15f7e3437124f202e87955): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[14-Nov-2018 15:25:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 15:25:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 15:25:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 15:25:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 20:49:12 UTC] PHP Warning:  unlink(/tmp/phpcrudapi-58cd46f0-cache/4d1726a0026bf7d579b1081903ce6566): No such file or directory in /home/awomefqx/public_html/api.php on line 233
+[14-Nov-2018 20:49:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[14-Nov-2018 20:49:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/awomefqx/public_html/api.php:233) in /home/awomefqx/public_html/api.php on line 3525
+[15-Nov-2018 05:05:31 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:05:31 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear:.:/home/awomefqx/public_html:/home/awomefqx/public_html/include;.;/home/awomefqx/public_html;/home/awomefqx/public_html/Include') in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:05:37 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:05:37 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear:.:/home/awomefqx/public_html:/home/awomefqx/public_html/include;.;/home/awomefqx/public_html;/home/awomefqx/public_html/Include') in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:06:02 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:06:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear:.:/home/awomefqx/public_html:/home/awomefqx/public_html/include;.;/home/awomefqx/public_html;/home/awomefqx/public_html/Include') in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:08:50 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:08:50 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear:.:/home/awomefqx/public_html:/home/awomefqx/public_html/include;.:/home/awomefqx/public_html:/home/awomefqx/public_html/Include') in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:08:58 UTC] PHP Warning:  require_once(html.php): failed to open stream: No such file or directory in /home/awomefqx/public_html/Finance.cls.php on line 7
+[15-Nov-2018 05:08:58 UTC] PHP Fatal error:  require_once(): Failed opening required 'html.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear:.:/home/awomefqx/public_html:/home/awomefqx/public_html/include;.:/home/awomefqx/public_html:/home/awomefqx/public_html/Include') in /home/awomefqx/public_html/Finance.cls.php on line 7

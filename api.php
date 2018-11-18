@@ -3540,7 +3540,7 @@ class Response
     }
 }
 // file: src/index.php
-$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' =>9999]);
+$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' =>0]);
 $request = new Request();
 $api = new Api($config);
 $response = $api->handle($request);
