@@ -1929,9 +1929,9 @@ class GenericDB
         $options = array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION, \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC);
         switch ($this->driver) {
             case 'mysql':
-                return $options + [\PDO::ATTR_EMULATE_PREPARES => false, \PDO::MYSQL_ATTR_FOUND_ROWS => true];
+                return $options + [\PDO::ATTR_EMULATE_PREPARES => true, \PDO::MYSQL_ATTR_FOUND_ROWS => true];
             case 'pgsql':
-                return $options + [\PDO::ATTR_EMULATE_PREPARES => false];
+                return $options + [\PDO::ATTR_EMULATE_PREPARES => true];
             case 'sqlsrv':
                 return $options + [\PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE => true];
         }
@@ -3540,7 +3540,7 @@ class Response
     }
 }
 // file: src/index.php
-$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome', 'debug' => true, 'cacheTime' =>0]);
+$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome','address'=>'127.0.0.1', 'debug' => true, 'cacheTime' =>0]);
 $request = new Request();
 $api = new Api($config);
 $response = $api->handle($request);

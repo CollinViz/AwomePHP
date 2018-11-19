@@ -1,7 +1,7 @@
 <?php
 #TYPE_OS = WIN LINUX
-$TYPE_OS='WIN';
-$PATH_DM =";";$PATH_FD="\\\\";if($TYPE_OS=='WIN'){	$PATH_DM =";";	$PATH_FD="\\\\";}else{	$PATH_DM =":";	$PATH_FD="//";}
+$TYPE_OS=(PATH_SEPARATOR==':'?'LINUX':'WIN');
+$PATH_DM =PATH_SEPARATOR;$PATH_FD="\\\\";if($TYPE_OS=='WIN'){	$PATH_DM =PATH_SEPARATOR;	$PATH_FD="\\\\";}else{	$PATH_DM =PATH_SEPARATOR;	$PATH_FD="//";}
 session_start();
 // Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
@@ -34,6 +34,7 @@ $password_conEber = "awome";
 //$password_conEber = "Aw0m3user";
  
 $concustomercontrol = new mysqli($hostname_conEber, $username_conEber, $password_conEber, $database_conEber);
+$concustomercontrol->select_db($database_conEber);  
 error_reporting(E_ALL);
 
 /* check connection */

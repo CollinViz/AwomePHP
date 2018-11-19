@@ -1,8 +1,8 @@
 <?php
-$BASE_PATH = dirname(__FILE__);
-$DEPENDS_PATH  = ".;".$BASE_PATH;
-$DEPENDS_PATH .= ";".$BASE_PATH."/Include";
-ini_set("include_path", ini_get("include_path").";".$DEPENDS_PATH);
+//$BASE_PATH = dirname(__FILE__);
+//$DEPENDS_PATH  = ".".$BASE_PATH;
+//$DEPENDS_PATH .= ";".$BASE_PATH."/Include";
+//ini_set("include_path", ini_get("include_path").";".$DEPENDS_PATH);
 
 require_once 'html.php'; 
 require_once 'config.php'; 
