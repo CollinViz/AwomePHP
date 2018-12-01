@@ -220,7 +220,7 @@ class ReportsGUI extends html {
         while ($row=$stmt->fetch_array()) {
             $oSeries->addData2Series($row[0], 'Average Income',$row[1]); 
             $oSeries->addData2Series($row[0], 'Average Expenses',$row[2]); 
-            $oSeries->addData2Series($row[0], 'Average Profit',$row[2]); 
+            $oSeries->addData2Series($row[0], 'Average Profit',$row[3]); 
         } 
 
         echo $oSeries->exportJasonSeries();
