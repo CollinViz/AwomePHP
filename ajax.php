@@ -25,6 +25,7 @@ $arAJXClass = array();
 $arAJXClass["LoginGUI"] = "login.cls.php"; 
 $arAJXClass["FinanceGUI"] = "Finance.cls.php"; 
 $arAJXClass["ReportsGUI"] = "reports.php"; 
+$arAJXClass["DBDeleteGUI"] = "dbdelete.cls.php"; 
 
 if(isset($objData->__class)){
 	if( isset($arAJXClass[$objData->__class])){
