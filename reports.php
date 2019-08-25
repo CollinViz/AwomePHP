@@ -856,14 +856,17 @@ class ReportsGUI extends html {
         
         if( $this->Age!="Select" && $this->Age!=""){
             if( $this->Age=="Below 20"){
-             $strWhere.=sprintf(" AND  year(curdate()) - year(birth_date) < 20");
+            // $strWhere.=sprintf(" AND  year(curdate()) - year(birth_date) < 20");
+             $strWhere.=sprintf(" AND  enterprise_id in (select enterprise_id from enterprise_member where entrepreneur_id in (select entrepreneur_id from entrepreneur where year(curdate()) - year(birth_date) < 20 ))");
             }
             if( $this->Age=="Over 69"){
-             $strWhere.=sprintf(" AND  year(curdate()) - year(birth_date) > 69");
+             //$strWhere.=sprintf(" AND  year(curdate()) - year(birth_date) > 69");
+             $strWhere.=sprintf(" AND  enterprise_id in (select enterprise_id from enterprise_member where entrepreneur_id in (select entrepreneur_id from entrepreneur where year(curdate()) - year(birth_date) > 69 ))");
             }
             if( strpos($this->Age, '-') !== false){
              $arr = explode("-", $this->Age);
-             $strWhere.=sprintf(" AND year(curdate()) - year(birth_date) between'%d' AND '%d' ",$arr[0],$arr[1]);
+             //$strWhere.=sprintf(" AND year(curdate()) - year(birth_date) between'%d' AND '%d' ",$arr[0],$arr[1]);
+             $strWhere.=sprintf(" AND  enterprise_id in (select enterprise_id from enterprise_member where entrepreneur_id in (select entrepreneur_id from entrepreneur where year(curdate()) - year(birth_date) between '%d' AND '%d' ))",$arr[0],$arr[1]);
             } 
         } 
         return $strWhere;
