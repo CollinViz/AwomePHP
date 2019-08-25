@@ -14,15 +14,15 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 	if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
-		header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+		header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
 	if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
 		header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 
 	exit(0);
 }
-$PAGE_NAME=""; 
- 
+$PAGE_NAME="";
+
 $hostname_conEber = "127.0.0.1";
 $database_conEber = "awome";
 $username_conEber = "awome";
@@ -32,15 +32,17 @@ $password_conEber = "awome";
 //$database_conEber = "ewepmcqo_awome";
 //$username_conEber = "ewepmcqo_awomis";
 //$password_conEber = "Aw0m3user";
- 
+
 $concustomercontrol = new mysqli($hostname_conEber, $username_conEber, $password_conEber, $database_conEber);
-$concustomercontrol->select_db($database_conEber);  
+$concustomercontrol->select_db($database_conEber);
 error_reporting(E_ALL);
 
 /* check connection */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
-}   
+}
+
+$FILE_SYSTEM_ROOT = "upload";
 
 ?>

@@ -439,7 +439,7 @@ class MetaController
     }
     /**
      * Used to get view data - Need to be combined with getDatabase rout
-     * 
+     *
      */
     public function getDatabaseview(Request $request)
     {
@@ -447,7 +447,7 @@ class MetaController
         return $this->responder->success($database);
     }
     /**
-     * Get info about a view     
+     * Get info about a view
      */
     public function getview(Request $request)
     {
@@ -905,7 +905,7 @@ class DataService
     }
     public function create($tableName, $record, array $params)
     {
-         
+
         $this->sanitizeRecord($tableName, $record, '');
         $table = $this->tables->get($tableName);
         $columnValues = $this->columns->getValues($table, true, $record, $params);
@@ -1967,15 +1967,15 @@ class GenericDB
     }
     public function createSingle(ReflectedTable $table, array $columnValues)
     {
-         
+
         $this->converter->convertColumnValues($table, $columnValues);
         $insertColumns = $this->columns->getInsert($table, $columnValues);
         $tableName = $table->getName();
-         
+
         $pkName = $table->getPk()->getName();
         $parameters = array_values($columnValues);
         $sql = 'INSERT INTO "' . $tableName . '" ' . $insertColumns;
-         
+
         $stmt = $this->query($sql, $parameters);
         if (isset($columnValues[$pkName])) {
             return $columnValues[$pkName];
@@ -2086,7 +2086,7 @@ class GenericDB
     private function query($sql, array $parameters)
     {
         $stmt = $this->pdo->prepare($sql);
-         
+
         $stmt->execute($parameters);
         return $stmt;
     }
@@ -2398,9 +2398,9 @@ class GenericReflection
         }
     }
     /**
-     * Get all view 
+     * Get all view
      * NB : MSSQL and pgsql not implemented yet
-     * 
+     *
      */
     private function getViewsSQL()
     {
@@ -3540,7 +3540,7 @@ class Response
     }
 }
 // file: src/index.php
-$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome','address'=>'127.0.0.1', 'debug' => true, 'cacheTime' =>0]);
+$config = new Config(['username' => 'awome', 'password' => 'awome', 'database' => 'awome','address'=>'127.0.0.1', 'debug' => true, 'cacheTime' =>999]);
 $request = new Request();
 $api = new Api($config);
 $response = $api->handle($request);
